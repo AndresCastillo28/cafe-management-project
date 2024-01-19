@@ -1,5 +1,6 @@
 package com.optitasolutions.POJO;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;

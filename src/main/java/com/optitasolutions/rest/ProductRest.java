@@ -18,4 +18,16 @@ public interface ProductRest {
 
     @PutMapping
     ResponseEntity<String> updateProduct(@RequestBody Map<String, String> requestMap);
+
+    @DeleteMapping(path = "/{id}")
+    ResponseEntity<String> deleteProduct(@PathVariable Integer id);
+
+    @PatchMapping
+    ResponseEntity<String> updateStatus(@RequestBody Map<String, String> requestMap);
+
+    @GetMapping("/find-by-category/{id}")
+    ResponseEntity<List<ProductWrapper>> getByCategory(@PathVariable Integer id);
+
+    @GetMapping("/{id}")
+    ResponseEntity<ProductWrapper> getProductById(@PathVariable Integer id);
 }
